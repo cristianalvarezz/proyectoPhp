@@ -1,6 +1,6 @@
 <?php
-
-final class User
+//el final tampoco se puede soobre escribir 
+ class User
 {
     public $name;
 
@@ -8,17 +8,21 @@ final class User
     {
         $this->name = $name;
     }
+//el final es para no sobreescribir el metodo 
 
     final public function getName()
     {
         return $this->name;
     }
 }
-
-class Admin
+//quiero crear un admin que tenga las caracteristicas del usuario 
+class Admin extends User
 {
-
+    public function addName()
+    {
+        return "soy $this->name";
+    }
 }
 
-$admin = new User('Italo');
-echo $admin->getName();
+$admin = new Admin('Italo');
+echo $admin->addName();

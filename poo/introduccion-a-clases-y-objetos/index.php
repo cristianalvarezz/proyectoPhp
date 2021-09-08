@@ -2,23 +2,12 @@
 
 // include
 
-class Person
-{
-    public function greet() // Person.php
-    {
-        return "Hola $this->name";
-    }
-}
+require_once './clases/person.php';
+require_once './clases/user.php';
+require_once './clases/admin.php';
 
-class User
-{
-    public $type;
-}
 
-class Admin extends Person
-{
-    public $name = 'Administrador';
-}
+
 
 $user = new User;
 $user->type = new Admin;

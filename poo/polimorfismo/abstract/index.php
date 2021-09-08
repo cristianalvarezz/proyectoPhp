@@ -6,11 +6,13 @@ abstract class Base
 
     private function getClassName()
     {
+        //nombre de la clase que me esta llamando 
         return get_called_class();
     }
 
     public function login()
     {
+        //accedo al nombre de la clase que acabo de crear 
         return "Mi nombre es $this->name desde la clase {$this->getClassName()}";
     }
 }

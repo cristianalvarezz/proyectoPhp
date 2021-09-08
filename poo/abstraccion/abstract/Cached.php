@@ -6,4 +6,9 @@ class Cached extends Base
     {
         // ...
     }
+
+    function store()
+    {
+        
+    }
 }
